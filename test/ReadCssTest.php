@@ -3,7 +3,7 @@
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4 cc=76; */
 
 /**
- * Tests for `readCss`.
+ * Tests for `readCSS`.
  *
  * @package     omeka
  * @subpackage  neatline
@@ -20,11 +20,11 @@ class ReadCssTest extends PHPUnit_Framework_TestCase
 
 
     /**
-     * `readCss` should convert a CSS string into an array.
+     * `readCSS` should convert a CSS string into an array.
      */
-    public function testReadCss()
+    public function testreadCSS()
     {
-        $this->assertEquals(PHP_CSS::readCss("
+        $this->assertEquals(PHP_CSS::readCSS("
             sel1 {
                 prop1: val1;
                 prop2: val2;
@@ -43,7 +43,6 @@ class ReadCssTest extends PHPUnit_Framework_TestCase
                 'prop4' => 'val4'
             )
         ));
-
     }
 
 

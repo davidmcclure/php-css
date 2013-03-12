@@ -3,7 +3,7 @@
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4 cc=76; */
 
 /**
- * Tests for `writeCss`.
+ * Tests for `writeCSS`.
  *
  * @package     omeka
  * @subpackage  neatline
@@ -20,11 +20,11 @@ class WriteCssTest extends PHPUnit_Framework_TestCase
 
 
     /**
-     * `writeCss` should convert an array into a CSS string.
+     * `writeCSS` should convert an array into a CSS string.
      */
-    public function testWriteCss()
+    public function testwriteCSS()
     {
-        $this->assertEquals(PHP_CSS::writeCss(array(
+        $this->assertEquals(PHP_CSS::writeCSS(array(
             'sel1' => array(
                 'prop1' => 'val1',
                 'prop2' => 'val2'
@@ -45,7 +45,7 @@ class WriteCssTest extends PHPUnit_Framework_TestCase
      */
     public function testBreaks()
     {
-        $this->assertEquals(PHP_CSS::writeCss(array(
+        $this->assertEquals(PHP_CSS::writeCSS(array(
             'sel1' => array(
                 'prop1' => 'val1'
             ),
@@ -65,7 +65,7 @@ class WriteCssTest extends PHPUnit_Framework_TestCase
      */
     public function testIndent()
     {
-        $this->assertEquals(PHP_CSS::writeCss(array(
+        $this->assertEquals(PHP_CSS::writeCSS(array(
             'sel' => array('prop' => 'val')
         ), null, 4),
             // 4-space indentation.

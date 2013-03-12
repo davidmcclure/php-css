@@ -21,7 +21,7 @@ class PHP_CSS {
      * @param string $css CSS string.
      * @return array $styles An array of rules.
      */
-    public static function readCss($css)
+    public static function readCSS($css)
     {
 
         $styles = array();
@@ -72,7 +72,7 @@ class PHP_CSS {
      * @param integer $indent Number of spaces to indent rules.
      * @return string $css CSS string.
      */
-    public static function writeCss($styles, $breaks=1, $indent=2)
+    public static function writeCSS($styles, $breaks=1, $indent=2)
     {
 
         $css = '';
