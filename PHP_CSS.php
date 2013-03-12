@@ -3,7 +3,7 @@
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4 cc=76; */
 
 /**
- * Read and write CSS with PHP. Stupid simple.
+ * Read and write CSS with PHP.
  *
  * @package     omeka
  * @subpackage  neatline
@@ -77,23 +77,23 @@ class PHP_CSS {
 
         $css = '';
         $len = count($styles);
-        $i = 0;
+        $itr = 0;
 
         foreach ($styles as $selector => $rules) {
 
             // selector {
             $css .= $selector.' {\n';
+
+            // property: value;
             foreach ($rules as $prop => $val) {
-
-                // property: value;
                 $css .= str_repeat(' ' , $indent).$prop.': '.$val.';\n';
-
             }
 
-            // }
             $css .= '}';
-            if ($i != $len-1) $css .= str_repeat('\n', $breaks+1);
-            $i++;
+
+            // If not last selector, add line break(s).
+            if ($itr != $len-1) $css .= str_repeat('\n', $breaks+1);
+            $itr++;
 
         }
 
