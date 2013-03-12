@@ -24,6 +24,43 @@ class SimpleCss {
     public static function readCss($css)
     {
 
+        $styles = array();
+
+        // Match rule sets.
+        $re = '/[^{]+\s*\{\s*[^}]+\s*}/';
+        preg_match_all($re, $css, $matches);
+        foreach ($matches[0] as $set) {
+
+            // Match selector.
+            $re = '/(?P<selector>[.#a-z0-9-]+)\s*\{/';
+            preg_match($re, $set, $matches);
+            $selector = $matches['selector'];
+            $styles[$selector] = array();
+
+            // Match rules.
+            $re = '/[a-z0-9-]+:\s*[^;]+;/';
+            preg_match_all($re, $set, $matches);
+            foreach ($matches[0] as $rule) {
+
+                // Match property.
+                $re = '/(?P<property>[a-z0-9-]+)\s*:/';
+                preg_match($re, $rule, $matches);
+                $prop = $matches['property'];
+
+                // Match value.
+                $re = '/:\s*(?P<value>[^;]+)\s*;/';
+                preg_match($re, $rule, $matches);
+                $val = $matches['value'];
+
+                // Add to array.
+                $styles[$selector][$prop] = $val;
+
+            }
+
+        }
+
+        return $styles;
+
     }
 
 

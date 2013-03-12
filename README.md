@@ -1,3 +1,3 @@
 # SimpleCss
 
-Read, write CSS in PHP. No nonsense.
+Read, write CSS in PHP.

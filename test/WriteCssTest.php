@@ -12,7 +12,7 @@
  */
 
 
-require_once '../CSS_JSON.php';
+require_once '../SimpleCss.php';
 
 
 class WriteCssTest extends PHPUnit_Framework_TestCase
@@ -20,11 +20,11 @@ class WriteCssTest extends PHPUnit_Framework_TestCase
 
 
     /**
-     * `writeCss` should print an array as a CSS string.
+     * `writeCss` should convert an array into a CSS string.
      */
     public function testWriteCss()
     {
-        $this->assertEquals(CSS_JSON::writeCss(array(
+        $this->assertEquals(SimpleCss::writeCss(array(
             'sel1' => array(
                 'prop1' => 'val1',
                 'prop2' => 'val2'
@@ -45,7 +45,7 @@ class WriteCssTest extends PHPUnit_Framework_TestCase
      */
     public function testBreaks()
     {
-        $this->assertEquals(CSS_JSON::writeCss(array(
+        $this->assertEquals(SimpleCss::writeCss(array(
             'sel1' => array(
                 'prop1' => 'val1'
             ),
@@ -65,7 +65,7 @@ class WriteCssTest extends PHPUnit_Framework_TestCase
      */
     public function testIndent()
     {
-        $this->assertEquals(CSS_JSON::writeCss(array(
+        $this->assertEquals(SimpleCss::writeCss(array(
             'sel' => array('prop' => 'val')
         ), null, 4),
             // 4-space indentation.
