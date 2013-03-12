@@ -12,7 +12,7 @@
  */
 
 
-require_once '../SimpleCss.php';
+require_once '../PHP_CSS.php';
 
 
 class WriteCssTest extends PHPUnit_Framework_TestCase
@@ -24,7 +24,7 @@ class WriteCssTest extends PHPUnit_Framework_TestCase
      */
     public function testWriteCss()
     {
-        $this->assertEquals(SimpleCss::writeCss(array(
+        $this->assertEquals(PHP_CSS::writeCss(array(
             'sel1' => array(
                 'prop1' => 'val1',
                 'prop2' => 'val2'
@@ -45,7 +45,7 @@ class WriteCssTest extends PHPUnit_Framework_TestCase
      */
     public function testBreaks()
     {
-        $this->assertEquals(SimpleCss::writeCss(array(
+        $this->assertEquals(PHP_CSS::writeCss(array(
             'sel1' => array(
                 'prop1' => 'val1'
             ),
@@ -65,7 +65,7 @@ class WriteCssTest extends PHPUnit_Framework_TestCase
      */
     public function testIndent()
     {
-        $this->assertEquals(SimpleCss::writeCss(array(
+        $this->assertEquals(PHP_CSS::writeCss(array(
             'sel' => array('prop' => 'val')
         ), null, 4),
             // 4-space indentation.

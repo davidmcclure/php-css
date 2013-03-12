@@ -12,7 +12,7 @@
  */
 
 
-require_once '../SimpleCss.php';
+require_once '../PHP_CSS.php';
 
 
 class ReadCssTest extends PHPUnit_Framework_TestCase
@@ -24,7 +24,7 @@ class ReadCssTest extends PHPUnit_Framework_TestCase
      */
     public function testReadCss()
     {
-        $this->assertEquals(SimpleCss::readCss("
+        $this->assertEquals(PHP_CSS::readCss("
             sel1 {
                 prop1: val1;
                 prop2: val2;

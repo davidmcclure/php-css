@@ -12,7 +12,7 @@
  */
 
 
-class SimpleCss {
+class PHP_CSS {
 
 
     /**
