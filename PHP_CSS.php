@@ -3,7 +3,7 @@
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4 cc=76; */
 
 /**
- * Convert CSS to JSON, JSON to CSS.
+ * Read and write CSS with PHP. Stupid simple.
  *
  * @package     omeka
  * @subpackage  neatline
