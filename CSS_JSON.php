@@ -18,8 +18,8 @@ class CSS_JSON {
     /**
      * Convert CSS to JSON.
      *
-     * @param string $css CSS.
-     * @return string $json JSON.
+     * @param string $css CSS string.
+     * @return string $json JSON string.
      */
     public static function cssToJson($css)
     {
@@ -30,11 +30,63 @@ class CSS_JSON {
     /**
      * Convert JSON to CSS.
      *
-     * @param string $json JSON.
-     * @return string $css CSS.
+     * @param string $json JSON string.
+     * @return string $css CSS string.
      */
     public static function jsonToCss($json)
     {
+
+    }
+
+
+    /**
+     * Map a CSS string to an associative array.
+     *
+     * @param string $css CSS string.
+     * @return array $styles An array of rules.
+     */
+    public static function readCss($css)
+    {
+
+    }
+
+
+    /**
+     * Dump an associative array to a CSS string.
+     *
+     * @param array $styles An array of rules.
+     * @param integer $breaks Number of empty lines between rule sets.
+     * @param integer $indent Number of spaces to indent rules.
+     * @return string $css CSS string.
+     */
+    public static function writeCss($styles, $breaks=1, $indent=2)
+    {
+
+        $css = '';
+
+        $len = count($styles); $i = 0;
+        foreach ($styles as $selector => $rules) {
+
+            // selector {
+            $css .= $selector.' {\n';
+            foreach ($rules as $prop => $val) {
+
+                // property: value;
+                $css .= str_repeat(' ' , $indent).$prop.': '.$val.';\n';
+
+            }
+
+            // }
+            $css .= '}';
+
+            // Blank lines.
+            if ($i != $len-1) $css .= str_repeat('\n', $breaks+1);
+
+            $i++;
+
+        }
+
+        return $css;
 
     }
 
