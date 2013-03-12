@@ -12,31 +12,7 @@
  */
 
 
-class CSS_JSON {
-
-
-    /**
-     * Convert CSS to JSON.
-     *
-     * @param string $css CSS string.
-     * @return string $json JSON string.
-     */
-    public static function cssToJson($css)
-    {
-
-    }
-
-
-    /**
-     * Convert JSON to CSS.
-     *
-     * @param string $json JSON string.
-     * @return string $css CSS string.
-     */
-    public static function jsonToCss($json)
-    {
-
-    }
+class SimpleCss {
 
 
     /**

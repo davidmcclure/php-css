@@ -1,3 +1,3 @@
-# CSS-JSON
+# SimpleCss
 
-Map CSS to JSON, JSON to CSS. Stupid simple.
+Read, write CSS in PHP. No nonsense.
