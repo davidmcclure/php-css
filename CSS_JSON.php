@@ -78,8 +78,6 @@ class CSS_JSON {
 
             // }
             $css .= '}';
-
-            // Blank lines.
             if ($i != $len-1) $css .= str_repeat('\n', $breaks+1);
 
             $i++;
