@@ -76,8 +76,9 @@ class PHP_CSS {
     {
 
         $css = '';
+        $len = count($styles);
+        $i = 0;
 
-        $len = count($styles); $i = 0;
         foreach ($styles as $selector => $rules) {
 
             // selector {
