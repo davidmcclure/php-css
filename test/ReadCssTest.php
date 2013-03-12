@@ -44,19 +44,6 @@ class ReadCssTest extends PHPUnit_Framework_TestCase
             )
         ));
 
-$string = PHP_CSS::writeCss(array(
-    'selector1' => array(
-        'property1' => 'value1',
-        'property2' => 'value2'
-    ),
-    'selector2' => array(
-        'property3' => 'value3',
-        'property4' => 'value4'
-    )
-));
-
-echo $string;
-
     }
 
 

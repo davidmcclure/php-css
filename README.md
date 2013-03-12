@@ -2,7 +2,7 @@
 
 Read and write CSS in PHP. Stupid simple. Tested.
 
-### CSS to PHP
+### CSS => PHP
 
 ```php
 $array = PHP_CSS::readCss("
@@ -37,7 +37,7 @@ Array
 )
 ```
 
-### PHP to CSS
+### PHP => CSS
 
 ```php
 $string = PHP_CSS::writeCss(array(
