@@ -1,11 +1,11 @@
 # PHP-CSS
 
-Read and write CSS in PHP. Stupid simple, tested.
+Read and write CSS in PHP. Stupid simple. Tested.
 
-## CSS to PHP
+### CSS to PHP
 
 ```php
-$css = PHP_CSS::readCss("
+$array = PHP_CSS::readCss("
     selector1 {
         property1: value1;
         property2: value2;
@@ -16,9 +16,11 @@ $css = PHP_CSS::readCss("
     }
 ");
 
-print_r($css);
+print_r($array);
+```
 
->>> Array
+```bash
+Array
 (
     [selector1] => Array
         (
@@ -33,4 +35,33 @@ print_r($css);
         )
 
 )
+```
+
+### PHP to CSS
+
+```php
+$string = PHP_CSS::writeCss(array(
+    'selector1' => array(
+        'property1' => 'value1',
+        'property2' => 'value2'
+    ),
+    'selector2' => array(
+        'property3' => 'value3',
+        'property4' => 'value4'
+    )
+));
+
+echo $string;
+```
+
+```bash
+selector1 {
+  property1: value1;
+  property2: value2;
+}
+
+selector2 {
+  property3: value3;
+  property4: value4;
+}
 ```
