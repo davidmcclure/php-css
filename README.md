@@ -1,4 +1,4 @@
-# PHP&harr;CSS
+# PHP &harr; CSS
 
 Read and write CSS in PHP. Stupid simple. Tested.
 
