@@ -1,6 +1,6 @@
 # PHP &harr; CSS
 
-Read and write CSS in PHP. Stupid simple. Tested.
+Read and write CSS in PHP. Stupid simple. ~100 loc. Tested.
 
 ### CSS &rarr; PHP
 
